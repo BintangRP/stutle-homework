@@ -1,28 +1,40 @@
 .container{
-    color:white;
+    color: rgb(255, 255, 255);
+    position:relative;
 }
 .box1{
-    color: #735d00;
+    background-color: #735d00;
     width: 50px;
     height: 50px;
+    float: left;
+    position:absolute;
 }
 .box2{
-    color: #735d00;
+    background-color: #735d00;
     width: 50px;
     height: 50px;
+    position:relative;
+    left: 100px;
 }
 .box3{
-    color: #735d00;
+    background-color: #735d00;
     width: 50px;
     height: 50px;
+    position:relative;
+    left:50px;
+
 }
 .box4{
-    color: #735d00;
+    background-color: #735d00;
     width: 50px;
     height: 50px;
+    float:left;
+    position:relative;
 }
 .box5{
-    color: #735d00;
+    background-color: #735d00;
     width: 50px;
     height: 50px;
+    position:relative;
+    left: 100px;
 }
