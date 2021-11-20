@@ -1,0 +1,8 @@
+font-family:
+	Poppins
+font-weight:
+	regular(400)
+	bold(700)
+background:
+	rgba(32, 35, 42, 1);
+
