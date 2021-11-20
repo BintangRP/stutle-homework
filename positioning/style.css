@@ -1,12 +1,11 @@
 .center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*container ditengah*/
+    position:absolute;
+    top: 50%;
+    right: 50%; 
 }
 
 .container{
-    /*container ditengah*/
-    align-items: center;
     color: rgb(255, 255, 255);
     position:relative;
 }
