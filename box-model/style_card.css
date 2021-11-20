@@ -1,0 +1,36 @@
+
+.card-box{
+    border: 1px solid rgb(150, 144, 144);
+    border-radius: 20px;
+    height: 400px;
+    width: 450px;
+    position: relative;
+    font-family: roboto sans-serif;
+    padding:5px 5px;
+}
+
+img{
+    padding: 0;
+    margin:0;
+    height: 200px;
+    width: 400px;
+    position:absolute;
+    right:25px;
+}
+.isi{
+    position: absolute;
+    top:200px;
+    padding: 10px 5px 1px 20px;
+}
+p{
+    opacity: 60%;
+    margin-top:10px;
+}
+.a1{
+    margin: 20px 10px;   
+    text-decoration: none;
+}
+.a2{
+    margin: 20px 10px;   
+    text-decoration: none;
+}
