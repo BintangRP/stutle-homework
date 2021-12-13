@@ -15,5 +15,4 @@ function Clicked(){
     let Data = data1 + data2 + data3
     let biodata = document.body.append(Data)
     console.log(biodata)
-    
 }

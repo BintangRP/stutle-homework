@@ -3,6 +3,10 @@
     position: relative;
 }
 
+.h1 {
+    text-align: center;
+}
+
 .inputText {
     padding: 20px;
     display: block;
@@ -10,17 +14,17 @@
 }
 
 .inputText input {
-    padding: 10px;
-
+    padding: 1em;
+    border-radius: 5px;
 }
 
 .hero {
     display: flex;
+    flex-wrap: wrap;
     text-align: center;
     justify-content: center;
     padding-bottom: 50px;
 }
-
 
 button {
     padding: 5px;
@@ -29,4 +33,13 @@ button {
     float: left;
 }
 
-#text {}
+button {
+    border-style: none;
+    border-radius: 7px;
+    background-color: rgb(231, 247, 241);
+}
+
+button:hover {
+    color: white;
+    background-color: rgb(31, 138, 40);
+}
