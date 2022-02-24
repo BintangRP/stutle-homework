@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #efefef;
+}
+
+
+/*
+=============== 
+Navbar Styles
+===============
+*/
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffff;
+    height: 7vh;
+    padding: 1vw;
+}
+
+/*
+=============== 
+Navbar Up Styles
+===============
+*/
+.logo {
+    margin-right: 5vw;
+}
+
+.navbarOption {
+    position: relative;
+    padding: 1.5vw;
+    margin: 2vw;
+    margin-left: 3vw;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navbarOption:hover {
+    background-color: #efefef;
+}
+
+.active,
+.active::before,
+.active::after,
+.active:hover {
+    background: #1876f2;
+}
+
+.navbarOption a {
+    color: black;
+}
+
+/*
+=============== 
+Sidebar Menu Left Styles
+===============
+*/
+.sidebarMenu {
+    display: flex;
+    flex-direction: column;
+    margin: 4vh 0;
+    overflow: auto;
+}
+
+.sidebarLeft {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    margin: 1vh;
+}
+
+.sidebarLeft h3 {
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+}
+
+.sidebarLeft:hover {}
+
+/*
+=============== 
+Sidebar Menu Right Styles
+===============
+*/
+
+/*
+=============== 
+Main Feed Styles
+===============
+*/
+
+/*
+=============== 
+Footer Styles
+===============
+*/
