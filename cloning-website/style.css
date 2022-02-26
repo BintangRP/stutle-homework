@@ -168,6 +168,12 @@ body::-webkit-scrollbar {
     display: scroll;
 }
 
+h3 {
+    font-family: var(--font-family-default);
+}
+
+
+
 /*
 =============== 
 Navbar Styles
@@ -178,17 +184,59 @@ Navbar Styles
     justify-content: center;
     align-items: center;
     background: #ffff;
-    height: 7vh;
-    padding: 1vw;
+    height: 54px;
+    padding: 0 30px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
 /*
 =============== 
-Navbar Up Styles
+Nav Position Styles
+===============
+*/
+.nav {
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    top: 0;
+    z-index: 100;
+    background-color: var(--fds-blue-60);
+}
+
+.nav-left {
+    display: flex;
+    align-self: flex-start;
+    flex-basis: 25%;
+    position: sticky;
+    width: 50vw;
+    padding: 8px 0;
+    display: inline-block;
+}
+
+.nav-center {
+    display: flex;
+    flex-basis: 50%;
+    align-items: center;
+    position: sticky;
+    height: 7vh;
+    width: 45vw;
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+
+.nav-right {
+    display: flex;
+    flex-basis: 25%;
+    align-self: flex-end;
+    align-items: flex-start;
+    position: sticky;
+    height: 9.3vh;
+    background-color: paleturquoise;
+}
+
+/*
+=============== 
+Nav Left Styles
 ===============
 */
 .logo,
@@ -196,49 +244,12 @@ Navbar Up Styles
     color: var(--fb-logo-color);
 }
 
-.navbarOption {
-    position: relative;
-    padding: 1.5vw;
-    margin: 2vw;
-    margin-left: 3vw;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 18px 2.5rem;
-}
-
-.navbarOption:hover {
-    background-color: #efefef;
-}
-
-.active,
-.active::before,
-.active::after,
-.active:hover {
-    background: var(--toggle-active-background);
-    padding: 18px 4rem;
-}
-
-.active .fa-house {
-    color: var(--toggle-active-icon);
-}
-
-.navbarOption a {
-    color: var(--always-black);
-}
-
-.navbarOption .fa-tv,
-.navbarOption .fa-object-group,
-.navbarOption .fa-gamepad,
-.navbarOption .fa-search,
-.navbarOption .fa-circle-chevron-down {
-    color: var(--fds-black);
-}
-
-.navbarOption:hover .fa-tv,
-.navbarOption:hover .fa-object-group,
-.navbarOption:hover .fa-gamepad,
-.navbarOption:hover .fa-circle-chevron-down {
-    color: var(--toggle-active-icon);
+input {
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    border: 0;
 }
 
 .search {
@@ -261,13 +272,88 @@ Navbar Up Styles
     width: 18px;
 }
 
-input {
-    width: 100%;
-    background: transparent;
-    padding: 10px;
-    outline: none;
-    border: 0;
+/*
+=============== 
+Nav Center Styles
+===============
+*/
+.navbarOption {
+    position: relative;
+    cursor: pointer;
+    margin: 10px 0.3rem;
+    text-decoration: none;
+    padding: 18px 2.5rem;
+    right: 0.8vw;
+    height: 7vh fixed;
+}
 
+.navbarOption:hover {
+    background-color: var(--toggle-active-background);
+}
+
+.active,
+.active::before,
+.active::after,
+.active:hover {
+    background: var(--toggle-active-background);
+    padding: 18px 3rem;
+}
+
+.active .fa-house {
+    color: var(--toggle-active-icon);
+}
+
+.navbarOption a {
+    color: var(--always-black);
+}
+
+.navbarOption .icons-navbar {
+    color: var(--fds-black);
+}
+
+.navbarOption:hover .fa-tv,
+.navbarOption:hover .fa-object-group,
+.navbarOption:hover .fa-gamepad,
+.navbarOption:hover .fa-circle-chevron-down {
+    color: var(--toggle-active-icon);
+}
+
+/*
+=============== 
+Nav Right Styles
+===============
+*/
+.nav-right .profile {
+    position: relative;
+    cursor: pointer;
+    padding: 1vh;
+    display: flex;
+}
+
+.nav-right .profile:hover {
+    background-color: var(--toggle-active-background);
+}
+
+.nav-right img {
+    position: sticky;
+    height: 35px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.profile span {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+    display: inline-block;
 }
 
 /*
@@ -292,7 +378,7 @@ Container Faces Styles
 }
 
 .main-bar {
-    background-color: var(--always-gray-75);
+    background-color: var(--always-gray-95);
     flex-basis: 43%;
     position: sticky;
     align-items: center;
@@ -314,40 +400,42 @@ Sidebar Menu Left Styles
 ===============
 */
 .sidebarMenu {
+    overflow-y: scroll;
+}
+
+.sidebarMenu {
     position: relative;
     display: flex;
     flex-direction: column;
     margin-top: 0.3rem;
-    padding-bottom: 4rem;
     background: var(--always-gray-95);
     width: 25vw;
-    overflow-y: auto;
 }
 
-.sidebarMenu .sidebarLeft {
+.sidebarMenu .sidebar-up-wrap {
     display: flex;
-    flex-direction: row;
-    display: inline-block;
+    flex-direction: column;
     font-family: var(--font-family-default);
     font-size: 0.9rem;
+    margin-bottom: 20px;
 }
 
-.sidebarMenu .sidebarLeft .fa-user-group,
-.sidebarMenu .sidebarLeft .fa-object-group,
-.sidebarMenu .sidebarLeft .fa-heart,
-.sidebarMenu .sidebarLeft .fa-tv,
-.sidebarMenu .sidebarLeft .fa-clock,
-.sidebarMenu .sidebarLeft .fa-circle-chevron-down {
+.sidebarMenu .sidebar-up-wrap .sidebarLeft {
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebarMenu .sidebar-up-wrap .sidebarLeft .icons-sidebarLeft {
     color: var(--base-blue);
     padding: 10px;
 }
 
 .sidebarMenu .sidebarLeft h3 {
-    display: inline-block;
+    display: flex;
     margin: 10px;
 }
 
-.sidebarLeft:hover {
+.sidebar-up-wrap .sidebarLeft:hover {
     background: var(--fds-gray-20);
     border-radius: 10px;
 }
@@ -358,12 +446,66 @@ Sidebar Menu Left Styles
     border-radius: 50%;
     display: flex;
     justify-content: center;
-    display: inline-block;
+    align-items: center;
     padding: 4px;
 }
 
 .sidebarLeft .profile {
     display: flex;
+}
+
+/*
+=============== 
+Shortcut (Left Menu) Styles
+===============
+*/
+.header {
+    padding-bottom: 10px;
+}
+
+.shortcut {
+    margin-top: 15px;
+    margin-bottom: 20px;
+
+    width: 25vw;
+}
+
+.shortcut {
+    display: flex;
+    flex-direction: column;
+}
+
+.shortcut h3 {
+    font-size: 1rem;
+    padding-left: 10px;
+}
+
+.shortcut .shortcut-card-box {
+    display: flex;
+    flex-direction: row;
+    width: 24vw;
+    padding: 12px;
+}
+
+.shortcut .shortcut-card-box:hover {
+    background-color: var(--fds-gray-25);
+    border-radius: 10px;
+}
+
+.shortcut-card-box .fa-flag,
+.shortcut-card-box .fa-fantasy-flight-games,
+.shortcut-card-box .fa-chess {
+    color: var(--base-blue);
+}
+
+/*
+=============== 
+Footer Styles
+===============
+*/
+.footer {
+    background: var(--attachment-footer-background);
+    font-size: 0.8rem;
 }
 
 /*
@@ -374,18 +516,17 @@ Sidebar Menu Right Styles
 
 
 
-
 /*
 =============== 
 Main Feed Styles
 ===============
 */
-.spot {
+.hightlight {
     display: flex;
     flex-direction: row;
 }
 
-.spot .story-line {
+.hightlight .story-line {
     display: flex;
     flex-direction: row;
     margin: 2px;
@@ -398,11 +539,3 @@ Main Feed Styles
     display: flex;
     padding: 1px;
 }
-
-
-
-/*
-=============== 
-Footer Styles
-===============
-*/
