@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
 /*
 =============== 
 Variabel
@@ -165,13 +167,48 @@ body {
 }
 
 body::-webkit-scrollbar {
-    display: scroll;
+    display: hidden;
 }
 
 h3 {
     font-family: var(--font-family-default);
+    line-height: 1;
 }
 
+hr {
+    opacity: 50%;
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    border: 0;
+}
+
+/*
+=============== 
+Fixed Top Styles
+===============
+*/
+.navbar-fixed-top {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.leftBar-fixed-top {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.rightBar-fixed-top {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
 
 /*
@@ -198,9 +235,7 @@ Nav Position Styles
     display: flex;
     position: sticky;
     justify-content: space-between;
-    top: 0;
-    z-index: 100;
-    background-color: var(--fds-blue-60);
+    background: var(--nav-bar-background);
 }
 
 .nav-left {
@@ -228,10 +263,8 @@ Nav Position Styles
     display: flex;
     flex-basis: 25%;
     align-self: flex-end;
-    align-items: flex-start;
     position: sticky;
-    height: 9.3vh;
-    background-color: paleturquoise;
+    height: 64px;
 }
 
 /*
@@ -239,17 +272,22 @@ Nav Position Styles
 Nav Left Styles
 ===============
 */
-.logo,
-.logo .fa-facebook {
-    color: var(--fb-logo-color);
+.logos {
+    display: flex;
+    flex-direction: row;
 }
 
-input {
-    width: 100%;
-    background: transparent;
-    padding: 10px;
-    outline: none;
-    border: 0;
+.logo .fa-facebook {
+    color: var(--fb-logo-color);
+    font-size: 2.5rem;
+}
+
+.search .icons-search {
+    opacity: 50%;
+}
+
+.logos .search .inputOption {
+    font-size: 1rem;
 }
 
 .search {
@@ -324,36 +362,38 @@ Nav Right Styles
 ===============
 */
 .nav-right .profile {
+    display: flex;
+    flex-direction: row;
     position: relative;
     cursor: pointer;
     padding: 1vh;
-    display: flex;
+    height: 65px;
 }
 
 .nav-right .profile:hover {
     background-color: var(--toggle-active-background);
 }
 
-.nav-right img {
+.nav-right .profile .img {
     position: sticky;
-    height: 35px;
-    width: 30px;
+    height: 36px;
+    width: 36px;
     border-radius: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 4px;
     margin: 10px;
-    display: inline-block;
+}
+
+.profile .dropdown {
+    position: sticky;
+    display: flex;
+    background-color: var(--always-gray-95);
+    border-radius: 50%;
+    align-self: center;
 }
 
 .profile span {
-    position: sticky;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    flex-wrap: wrap;
-    display: inline-block;
+    color: var(--base-blue);
 }
 
 /*
@@ -364,34 +404,45 @@ Container Faces Styles
 .container {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    margin: 20px;
 }
 
 .left-sidebar {
     background-color: var(--always-gray-95);
-    flex-basis: 25%;
+    flex-basis: 22%;
     position: sticky;
-    top: 70px;
-    right: 50px;
+    top: 0px;
     align-self: flex-start;
     height: 100vh;
+    overflow: hidden;
+}
+
+.left-sidebar:hover {
+    overflow: scroll;
 }
 
 .main-bar {
     background-color: var(--always-gray-95);
-    flex-basis: 43%;
-    position: sticky;
+    flex-basis: 47%;
+    position: absolute;
     align-items: center;
-    right: 300px;
+    left: 400px;
+    max-width: 564px;
 }
 
-.right-bar {
+.right-sidebar {
     background-color: var(--always-gray-95);
-    flex-basis: 25%;
+    flex-basis: 22%;
     position: sticky;
-    top: 70px;
-    align-self: flex-end;
+    align-items: flex-end;
+    top: 0px;
     height: 100vh;
+    overflow-y: hidden;
+
+}
+
+.right-sidebar:hover {
+    overflow-y: scroll;
 }
 
 /*
@@ -400,7 +451,9 @@ Sidebar Menu Left Styles
 ===============
 */
 .sidebarMenu {
-    overflow-y: scroll;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .sidebarMenu {
@@ -409,7 +462,7 @@ Sidebar Menu Left Styles
     flex-direction: column;
     margin-top: 0.3rem;
     background: var(--always-gray-95);
-    width: 25vw;
+    width: 19.5vw;
 }
 
 .sidebarMenu .sidebar-up-wrap {
@@ -441,8 +494,8 @@ Sidebar Menu Left Styles
 }
 
 .sidebarLeft img {
-    height: 35px;
-    width: 30px;
+    height: 36px;
+    width: 36px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -466,8 +519,7 @@ Shortcut (Left Menu) Styles
 .shortcut {
     margin-top: 15px;
     margin-bottom: 20px;
-
-    width: 25vw;
+    width: 19.5vw;
 }
 
 .shortcut {
@@ -483,7 +535,7 @@ Shortcut (Left Menu) Styles
 .shortcut .shortcut-card-box {
     display: flex;
     flex-direction: row;
-    width: 24vw;
+    width: 19.5vw;
     padding: 12px;
 }
 
@@ -521,6 +573,11 @@ Sidebar Menu Right Styles
 Main Feed Styles
 ===============
 */
+/*
+=============== 
+Hightlight Feed Styles
+===============
+*/
 .hightlight {
     display: flex;
     flex-direction: row;
@@ -529,13 +586,308 @@ Main Feed Styles
 .hightlight .story-line {
     display: flex;
     flex-direction: row;
-    margin: 2px;
+    margin: 0 10px;
+    opacity: 80%;
+    border-radius: 10%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.hightlight .story-line .upload {
+    background-color: var(--card-background);
+    position: absolute;
+}
+
+.hightlight .story-line .upload img {
+    position: relative;
+    bottom: 5px;
 }
 
 .story-line img {
-    height: 189px;
-    width: 106px;
+    height: 180px;
+    width: 106.67px;
     border-radius: 10%;
     display: flex;
     padding: 1px;
+}
+
+/*
+=============== 
+Status Feed Styles
+===============
+*/
+.status-feed {
+    font-family: var(--font-family-default);
+    background: var(--card-background);
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.status-feed .profile-input-header {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.status-feed .profile-input-header .img {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    margin: 10px;
+    margin-left: 20px;
+}
+
+.status-feed .profile-input-header .input-status {
+    font-family: var(--font-family-apple);
+    font-size: 1.1rem;
+    background: var(--always-gray-95);
+    border-radius: 25px;
+    width: 30vw;
+}
+
+.status-feed .profile-input-header .input-status:hover {
+    background: var(--fds-gray-20);
+}
+
+.icons-upload-header {
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.icon-video {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 21vw;
+}
+
+.icon-video:hover {
+    background: var(--always-gray-95);
+    border-radius: 10px;
+}
+
+.icon-video .fa-video {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    color: var(--fds-red-55);
+}
+
+.icon-video h3 {
+    padding-left: 20px;
+    font-size: 0.9rem;
+    color: var(--fds-dark-mode-gray-50);
+}
+
+.icon-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 21vw;
+    padding: 10px;
+}
+
+.icon-gallery:hover {
+    background: var(--always-gray-95);
+    border-radius: 10px;
+
+}
+
+.icon-gallery .fa-images {
+    font-size: 1.5rem;
+    color: var(--fds-green-55);
+}
+
+.icon-gallery h3 {
+    padding-left: 20px;
+    font-size: 0.9rem;
+    color: var(--fds-dark-mode-gray-50);
+}
+
+/*
+=============== 
+Card Feed Styles
+===============
+*/
+.card-feedUnit {
+    font-family: var(--font-family-segoe);
+    background: var(--card-background);
+    color: var(--fds-primary-text);
+    margin: 20px 0;
+    border-radius: 5%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/*
+=============== 
+Card Profile Styles
+===============
+*/
+.card-feedUnit .profile-feed {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin-left: 10px;
+}
+
+.profile-feed .head-head {
+    display: flex;
+    flex-direction: row;
+    margin: 7px 0;
+}
+
+.profile-feed .head-head .images-fed {
+    margin-right: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile-feed .head-head .h4-nameFD {
+    cursor: pointer;
+}
+
+.profile-feed .head-head .icon-verified {
+    margin-left: 7px;
+    color: var(--base-blue);
+}
+
+.profile-feed .icons-fed {
+    padding: 10px 0;
+    padding-right: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.icons-fed .icon-grip {
+    color: var(--always-gray-40);
+    font-size: 1.5rem;
+}
+
+.icons-fed .icon-grip:hover {
+    background: var(--always-gray-95);
+    border-radius: 45%;
+}
+
+/*
+=============== 
+Card Messages Styles
+===============
+*/
+.card-feedUnit .msg-feed {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+/*
+=============== 
+Card Content Styles
+===============
+*/
+.card-feedUnit .content-feed {}
+
+.content-feed .fig {
+    cursor: pointer;
+}
+
+.content-feed .fig-fig {
+    background: var(--always-gray-95);
+    font-weight: bold;
+    padding: 10px;
+}
+
+.figcaption-content {
+    font-family: var(--font-family-default);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.icons-feed {
+    display: flex;
+    padding: 20px;
+}
+
+/*
+=============== 
+Card Emote Styles
+===============
+*/
+.icons-feed .icon {}
+
+.icons-feed .span {}
+
+
+.icons-feed .like-icons:hover,
+.icons-feed .comment-icons:hover,
+.icons-feed .share-icons:hover {
+    background: var(--always-gray-95);
+    border-radius: 10px;
+}
+
+/*  Like Icon Styles  */
+.icons-feed .like-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.like-icons .icon {
+    padding-left: 5px;
+    color: var(--secondary-text);
+}
+
+.like-icons .span {
+    padding-left: 5px;
+    color: var(--secondary-text);
+}
+
+/*  Comment Icon Styles  */
+.icons-feed .comment-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.comment-icons .icon {
+    color: var(--secondary-text);
+}
+
+.comment-icons .span {
+    padding-left: 5px;
+    color: var(--secondary-text);
+}
+
+/*  Share Icon Styles  */
+.icons-feed .share-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.icons-feed .icon-flipped {
+    padding-left: 5px;
+    color: var(--secondary-text);
+    transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+}
+
+.share-icons .span {
+    color: var(--secondary-text);
 }

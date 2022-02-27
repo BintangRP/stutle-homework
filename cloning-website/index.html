@@ -12,18 +12,20 @@
 
 <body>
     <!-- nav starts -->
-    <nav>
+    <nav class="navbar-fixed-top">
         <!-- navbar up starts -->
         <div class="nav">
             <!-- nav left starts -->
             <div class="nav-left">
-                <div class="logo">
-                    <a href="index.html"><span class="fa-brands fa-facebook"></span></a>
-                </div>
+                <div class="logos">
+                    <div class="logo">
+                        <a href="index.html"><span class="fa-brands fa-facebook"></span></a>
+                    </div>
 
-                <div class="search">
-                    <span class="fa-solid fa-search"></span>
-                    <input class="inputOption" type="text" placeholder="Search">
+                    <div class="search">
+                        <span class="icons-search fa-solid fa-search"></span>
+                        <input class="inputOption" type="text" placeholder="Cari di Facebook">
+                    </div>
                 </div>
             </div>
             <!-- nav left ends -->
@@ -59,9 +61,9 @@
             <!-- nav right starts -->
             <div class="nav-right">
                 <div class="profile">
-                    <img
+                    <img class="img"
                         src="https://images.unsplash.com/photo-1645389411992-e9ec49b158e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80">
-                    <span class="fa-solid fa-circle-chevron-down"></span>
+                    <span class="dropdown fa-solid fa-circle-chevron-down"></span>
                 </div>
             </div>
             <!-- nav right ends -->
@@ -74,7 +76,7 @@
     <main>
         <div class="container">
             <!-- left bar starts -->
-            <div class="left-sidebar">
+            <div class="left-sidebar leftBar-fixed-top">
                 <!-- sidebar left starts -->
                 <div class="sidebarMenu">
                     <div class="sidebar-up-wrap">
@@ -188,23 +190,19 @@
                     <!-- footer ends -->
                 </div>
                 <!-- sidebar left ends -->
-
-                <!-- sidebar right starts -->
-                <div class="sidebarMenu2">
-                    <div class="sidebarright"></div>
-                </div>
-                <!-- sidebar right ends -->
             </div>
             <!-- left bar ends -->
 
             <!-- main bar starts -->
-            <div class="main-bar">
+            <div class="main-bar ">
                 <!-- spotlight feed starts -->
                 <div class="hightlight">
                     <div class="story-line upload">
                         <img
                             src="https://images.unsplash.com/photo-1645542523526-a444b4a39514?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80">
+                        <div class="icons-bg">
 
+                        </div>
                     </div>
                     <div class="story-line">
                         <img
@@ -219,7 +217,6 @@
                     <div class="story-line">
                         <img
                             src="https://images.unsplash.com/photo-1645542523526-a444b4a39514?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80">
-
                     </div>
                 </div>
                 <!-- spotlight feed ends -->
@@ -227,9 +224,11 @@
                 <!-- status feed starts -->
                 <div class="status-feed">
                     <div class="profile-input-header">
-                        <img src="" alt="">
-                        <input type="text">
+                        <img class="img"
+                            src="https://images.unsplash.com/photo-1645389411992-e9ec49b158e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80">
+                        <input class="input-status" type="text" placeholder="Apa yang anda pikirkan, Bintang?">
                     </div>
+                    <hr />
                     <div class="icons-upload-header">
                         <div class="icon-video">
                             <span class="fa-solid fa-video"></span>
@@ -246,26 +245,211 @@
                 <!-- card feed starts -->
                 <div class="card-feedUnit">
                     <div class="profile-feed">
-                        <div class="images-fed"></div>
-                        <div class="header-fed"></div>
-                        <div class="icons-fed"></div>
+                        <div class="head-head">
+                            <img class="images-fed"
+                                src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
+                                alt="" height="38px" width="38px">
+
+                            <span class="h4-nameFD">
+                                <h4>Profile Name The Others</h4>
+                            </span>
+
+                            <div class="icon-verified">
+                                <span class="bi bi-patch-check-fill"></span>
+                            </div>
+                        </div>
+
+                        <div class="icons-fed">
+                            <div class="icon-grip">
+                                <span class="bi bi-grip-horizontal"></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="msg-feed"></div>
-                    <div class="content-feed"></div>
+
+                    <div class="msg-feed">
+                        <span>
+                            <p>
+                                Pede nam sit quam interdum aenean euismod tincidunt eros per fermentum semper porta
+                                elit
+                                tempus magna pellentesque sagittis fames dictum velit
+                            </p>
+                        </span>
+                    </div>
+
+                    <div class="content-feed">
+                        <figure class="fig">
+                            <img src="https://images.unsplash.com/photo-1645786708004-fbbd4b0a71e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80"
+                                alt="" width="564px" height="300px">
+                        </figure>
+                        <figcaption class="fig-fig">
+                            <span class="figcaption-content">
+                                Sem nisl suspendisse venenatis feugiat odio ornare adipiscing ipsum mollis
+                            </span>
+                        </figcaption>
+                        <hr />
+                    </div>
+
                     <div class="icons-feed">
-                        <div class="like-icons"></div>
-                        <div class="comment-icons"></div>
+                        <div class="like-icons">
+                            <div class="icon"><span class="bi bi-hand-thumbs-up"></span></div>
+                            <div class="span"><span class="suka-span">Suka</span></div>
+                        </div>
+                        <div class="comment-icons">
+                            <div class="icon"> <span class="bi bi-chat-left-dots"></span></div>
+                            <div class="span"><span class="chat-span">Komentari</span></div>
+                        </div>
+                        <div class="share-icons">
+                            <div class="icon-flipped">
+                                <span class="bi bi-reply"></span>
+                            </div>
+                            <div class="span">
+                                <span class="share-span">Bagikan</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="card-feedUnit">
+                    <div class="profile-feed">
+                        <div class="head-head">
+                            <img class="images-fed"
+                                src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
+                                alt="" height="38px" width="38px">
+
+                            <span class="h4-nameFD">
+                                <h4>Profile Name The Others</h4>
+                            </span>
+
+                            <div class="icon-verified">
+                                <span class="bi bi-patch-check-fill"></span>
+                            </div>
+                        </div>
+
+                        <div class="icons-fed">
+                            <div class="icon-grip">
+                                <span class="bi bi-grip-horizontal"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="msg-feed">
+                        <span>
+                            <p>
+                                Pede nam sit quam interdum aenean euismod tincidunt eros per fermentum semper porta
+                                elit
+                                tempus magna pellentesque sagittis fames dictum velit
+                            </p>
+                        </span>
+                    </div>
+
+                    <div class="content-feed">
+                        <figure class="fig">
+                            <img src="https://images.unsplash.com/photo-1645786708004-fbbd4b0a71e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80"
+                                alt="" width="564px" height="300px">
+                        </figure>
+                        <figcaption class="fig-fig">
+                            <span class="figcaption-content">
+                                Sem nisl suspendisse venenatis feugiat odio ornare adipiscing ipsum mollis
+                            </span>
+                        </figcaption>
+                        <hr />
+                    </div>
+
+                    <div class="icons-feed">
+                        <div class="like-icons">
+                            <div class="icon"><span class="bi bi-hand-thumbs-up"></span></div>
+                            <div class="span"><span class="suka-span">Suka</span></div>
+                        </div>
+                        <div class="comment-icons">
+                            <div class="icon"> <span class="bi bi-chat-left-dots"></span></div>
+                            <div class="span"><span class="chat-span">Komentari</span></div>
+                        </div>
+                        <div class="share-icons">
+                            <div class="icon-flipped">
+                                <span class="bi bi-reply"></span>
+                            </div>
+                            <div class="span">
+                                <span class="share-span">Bagikan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-feedUnit">
+                    <div class="profile-feed">
+                        <div class="head-head">
+                            <img class="images-fed"
+                                src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
+                                alt="" height="38px" width="38px">
+
+                            <span class="h4-nameFD">
+                                <h4>Profile Name The Others</h4>
+                            </span>
+
+                            <div class="icon-verified">
+                                <span class="bi bi-patch-check-fill"></span>
+                            </div>
+                        </div>
+
+                        <div class="icons-fed">
+                            <div class="icon-grip">
+                                <span class="bi bi-grip-horizontal"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="msg-feed">
+                        <span>
+                            <p>
+                                Pede nam sit quam interdum aenean euismod tincidunt eros per fermentum semper porta
+                                elit
+                                tempus magna pellentesque sagittis fames dictum velit
+                            </p>
+                        </span>
+                    </div>
+
+                    <div class="content-feed">
+                        <figure class="fig">
+                            <img src="https://images.unsplash.com/photo-1645786708004-fbbd4b0a71e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80"
+                                alt="" width="564px" height="300px">
+                        </figure>
+                        <figcaption class="fig-fig">
+                            <span class="figcaption-content">
+                                Sem nisl suspendisse venenatis feugiat odio ornare adipiscing ipsum mollis
+                            </span>
+                        </figcaption>
+                        <hr />
+                    </div>
+
+                    <div class="icons-feed">
+                        <div class="like-icons">
+                            <div class="icon"><span class="bi bi-hand-thumbs-up"></span></div>
+                            <div class="span"><span class="suka-span">Suka</span></div>
+                        </div>
+                        <div class="comment-icons">
+                            <div class="icon"> <span class="bi bi-chat-left-dots"></span></div>
+                            <div class="span"><span class="chat-span">Komentari</span></div>
+                        </div>
+                        <div class="share-icons">
+                            <div class="icon-flipped">
+                                <span class="bi bi-reply"></span>
+                            </div>
+                            <div class="span">
+                                <span class="share-span">Bagikan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- card feed ends -->
             </div>
             <!-- main bar ends -->
 
             <!-- right sidebar starts -->
-            <div class="right-sidebar">
-                <p>asiap mantap</p>
+            <div class="right-sidebar rightBar-fixed-top">
+                <p class="contact-bar">asiap mantap</p>
+                <p class="chat-grup-bar">mantap2</p>
             </div>
             <!-- right sidebar ends -->
-
         </div>
 
     </main>
@@ -278,11 +462,15 @@
 <!--  
 
 TODO :
--nav left
--nav right
--mainbar status feed
--mainbar card flash feed make 2 of them 
--mainbar highlight
-
-
+-mainbar feed
+    mainbar highlight
+    fix main when scroll until end, nav still on the top
+-rightbar feed
+    kontak
+    setiap kontak dikasih hover
+    cursor pointer
+    dikasih icon video+, icon search, icon etc
+    grup
+    dikasih poto orang lagi online ditampilkan
+    paling bawah ada "Buat Grup Baru" dikasih profile (+)
 -->
