@@ -195,7 +195,7 @@ Fixed Top Styles
 .navbar-fixed-top {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 101;
 }
 
 .leftBar-fixed-top {
@@ -368,10 +368,12 @@ Nav Right Styles
     cursor: pointer;
     padding: 1vh;
     height: 65px;
+    background: var(--fds-gray-20);
 }
 
 .nav-right .profile:hover {
-    background-color: var(--toggle-active-background);
+    background-color: var(--fds-gray-25);
+
 }
 
 .nav-right .profile .img {
@@ -384,16 +386,24 @@ Nav Right Styles
     margin: 10px;
 }
 
+.nav-right .profile .nama-pfl {
+    font-family: var(--font-family-segoe);
+    display: flex;
+    align-self: center;
+    position: relative;
+    margin-right: 5px;
+}
+
 .profile .dropdown {
     position: sticky;
     display: flex;
-    background-color: var(--always-gray-95);
+    background: var(--fds-gray-20);
     border-radius: 50%;
     align-self: center;
 }
 
 .profile span {
-    color: var(--base-blue);
+    color: var(--fds-black);
 }
 
 /*
@@ -404,7 +414,6 @@ Container Faces Styles
 .container {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
 }
 
 .left-sidebar {
@@ -414,11 +423,12 @@ Container Faces Styles
     top: 0px;
     align-self: flex-start;
     height: 100vh;
-    overflow: hidden;
+    overflow-y: hidden;
+    margin: 0 20px 20px 20px;
 }
 
 .left-sidebar:hover {
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .main-bar {
@@ -428,6 +438,7 @@ Container Faces Styles
     align-items: center;
     left: 400px;
     max-width: 564px;
+    margin: 20px;
 }
 
 .right-sidebar {
@@ -438,11 +449,8 @@ Container Faces Styles
     top: 0px;
     height: 100vh;
     overflow-y: hidden;
-
-}
-
-.right-sidebar:hover {
-    overflow-y: scroll;
+    margin: 20px;
+    padding-left: 20px;
 }
 
 /*
@@ -454,13 +462,13 @@ Sidebar Menu Left Styles
     position: sticky;
     top: 0;
     z-index: 100;
+    margin-top: 20px;
 }
 
 .sidebarMenu {
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 0.3rem;
     background: var(--always-gray-95);
     width: 19.5vw;
 }
@@ -476,11 +484,13 @@ Sidebar Menu Left Styles
 .sidebarMenu .sidebar-up-wrap .sidebarLeft {
     display: flex;
     flex-direction: row;
+    cursor: pointer;
 }
 
 .sidebarMenu .sidebar-up-wrap .sidebarLeft .icons-sidebarLeft {
     color: var(--base-blue);
     padding: 10px;
+    font-size: 1.1rem;
 }
 
 .sidebarMenu .sidebarLeft h3 {
@@ -537,6 +547,7 @@ Shortcut (Left Menu) Styles
     flex-direction: row;
     width: 19.5vw;
     padding: 12px;
+    cursor: pointer;
 }
 
 .shortcut .shortcut-card-box:hover {
@@ -548,6 +559,7 @@ Shortcut (Left Menu) Styles
 .shortcut-card-box .fa-fantasy-flight-games,
 .shortcut-card-box .fa-chess {
     color: var(--base-blue);
+    font-size: 1.1rem;
 }
 
 /*
@@ -558,6 +570,10 @@ Footer Styles
 .footer {
     background: var(--attachment-footer-background);
     font-size: 0.8rem;
+}
+
+.footer:hover {
+    text-decoration: underline;
 }
 
 /*
@@ -581,33 +597,54 @@ Hightlight Feed Styles
 .hightlight {
     display: flex;
     flex-direction: row;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    background: var(--card-background);
+    padding: 15px;
+    width: 564px;
 }
 
-.hightlight .story-line {
+.hightlight {
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: var(--font-family-default);
+}
+
+.hightlight:hover {
+    background: var(--toggle-active-background);
+}
+
+.hlight-wrap-items {
     display: flex;
     flex-direction: row;
-    margin: 0 10px;
-    opacity: 80%;
-    border-radius: 10%;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.hightlight .story-line .upload {
-    background-color: var(--card-background);
-    position: absolute;
+.icon-plus-hlight {
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    padding: 5px;
+    font-size: 2rem;
 }
 
-.hightlight .story-line .upload img {
-    position: relative;
-    bottom: 5px;
+.icon-plus-hlight {
+    background: var(--fds-blue-30);
+    color: var(--fds-blue-70)
 }
 
-.story-line img {
-    height: 180px;
-    width: 106.67px;
-    border-radius: 10%;
+.hlight-wrap-text {
     display: flex;
-    padding: 1px;
+    flex-direction: column;
+    align-self: center;
+    padding: 15px;
+}
+
+.hlight-header-cerita {
+    font-size: 1.2rem;
+}
+
+.hlight-desc-cerita {
+    color: var(--fds-gray-45);
 }
 
 /*
@@ -635,6 +672,7 @@ Status Feed Styles
     border-radius: 50%;
     margin: 10px;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .status-feed .profile-input-header .input-status {
@@ -643,6 +681,7 @@ Status Feed Styles
     background: var(--always-gray-95);
     border-radius: 25px;
     width: 30vw;
+    cursor: pointer;
 }
 
 .status-feed .profile-input-header .input-status:hover {
@@ -657,12 +696,13 @@ Status Feed Styles
     padding: 10px;
 }
 
-.icon-video {
+.icons-upload-header .icon-video {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 21vw;
+    cursor: pointer;
 }
 
 .icon-video:hover {
@@ -670,7 +710,7 @@ Status Feed Styles
     border-radius: 10px;
 }
 
-.icon-video .fa-video {
+.icon-video {
     display: flex;
     flex-direction: row;
     font-size: 1.5rem;
@@ -690,6 +730,7 @@ Status Feed Styles
     align-items: center;
     width: 21vw;
     padding: 10px;
+    cursor: pointer;
 }
 
 .icon-gallery:hover {
@@ -750,6 +791,10 @@ Card Profile Styles
 
 .profile-feed .head-head .h4-nameFD {
     cursor: pointer;
+}
+
+.profile-feed .head-head .h4-nameFD:hover {
+    text-decoration: underline;
 }
 
 .profile-feed .head-head .icon-verified {
@@ -890,4 +935,144 @@ Card Emote Styles
 
 .share-icons .span {
     color: var(--secondary-text);
+}
+
+/*
+=============== 
+Right Bar Styles
+===============
+*/
+.sub-right {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    margin-bottom: 10px;
+    font-family: var(--font-family-default);
+    font-weight: 600;
+}
+
+.h4-sub {
+    display: flex;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    color: var(--always-dark-overlay)
+}
+
+/*  Kontak Styles  */
+.wrap-kontak-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.icons-right {
+    display: flex;
+}
+
+.icon-vid {
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 50%;
+    align-self: center;
+    cursor: pointer;
+
+}
+
+.icon-vid:hover {
+    background: var(--fds-gray-25);
+}
+
+.icon-search {
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 50%;
+    align-self: center;
+    cursor: pointer;
+}
+
+.icon-search:hover {
+    background: var(--fds-gray-25);
+}
+
+.icon-etc {
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 50%;
+    align-self: center;
+    cursor: pointer;
+}
+
+.icon-etc:hover {
+    background: var(--fds-gray-25);
+}
+
+.kontaks {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-ktk {
+    display: flex;
+    margin-right: 10px;
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.img-ktk:hover {
+    background: var(--fds-gray-20);
+}
+
+.fig-kontak img {
+    border-radius: 50%;
+    display: flex;
+    margin-right: 10px;
+}
+
+.online {
+    position: relative;
+}
+
+.online:after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border: 2px solid #ffff;
+    border-radius: 50%;
+    background: var(--base-lime);
+    position: absolute;
+    bottom: 0;
+    right: 9px;
+}
+
+.span-ktk {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+/*  Grup Styles  */
+.new-group {
+    display: flex;
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.new-group:hover {
+    background: var(--fds-gray-20)
+}
+
+.icon-plus {
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 50%;
+    background: var(--fds-gray-25);
+}
+
+.span-group {
+    display: flex;
+    align-items: center;
 }
